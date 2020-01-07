@@ -2,41 +2,58 @@
 #include<string>
 using namespace std;
 
-void mixText(string a,string b)
+string mixText(string a,string b)
 {
-	int n=a.size(),m=b.size();
-	int i=0;
-	
-	if(n==m)
-	{	
-		while(i<n)
-		{
-		cout << a[i];
-		cout << b[i];
-		i++;
-		}
-	}
-	else
+	int l1=a.size(),l2=b.size();
+	if(l1!=l2)
 	{
-		cout<<"E";
+		return "E";
 	}
+	int i=0;
+	string y="";
+	while(i<l1)
+	{
+		y = y + a[i] + b[i];
+		i++;
+	}
+	return y;
+
 }
+//void mixText(string a,string b)
+//{
+//	int n=a.size(),m=b.size();
+//	int i=0;
+	
+//	if(n==m)
+//	{	
+//		while(i<n)
+//		{
+//		cout << a[i];
+//		cout << b[i];
+//		i++;
+//		}
+//	}
+//	else
+//	{
+//		cout<<"E";
+//	}
+//	}
 	
 
 int main(){	
-	mixText("AAA","BBB") ;
+	cout<<mixText("AAA","BBB") ;
 	cout << "\n";
-	mixText("Hello","World") ;
+	cout<<mixText("Hello","World") ;
 	cout  << "\n";
-	mixText("SOTUS","CHEER") ;
+	cout<<mixText("SOTUS","CHEER") ;
 	cout  << "\n";
-	mixText("1234","5678") ;
+	cout<<mixText("1234","5678") ;
 	cout  << "\n";
-	mixText("6","9") ;
+	cout<<mixText("6","9") ;
 	cout  << "\n";
-	mixText("XXXXXXX","YYY") ;
+	cout<<mixText("XXXXXXX","YYY") ;
 	cout  << "\n";	
-	mixText("Y","XX") ;
+	cout<<mixText("Y","XX") ;
 	cout  << "\n";	
 	
 	return 0;	
